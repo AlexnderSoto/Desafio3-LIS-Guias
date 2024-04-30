@@ -5,5 +5,7 @@ Guías de Laboratorio
 Autores ✒️
 
 César Armando Romero López - 02L
+
 Jonathan Alexander Rodríguez Campos - 01L
+
 Oscar Alexander Bonilla Sorto - 02L
