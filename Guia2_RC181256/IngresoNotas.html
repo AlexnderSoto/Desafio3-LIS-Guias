@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Calculo de CUM</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-
+scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <link rel="stylesheet" href="css/salario.css" />
+    <link rel="stylesheet" href="css/formoid-solid-purple.css" />
+    <script src="js/disabledtextfields.js"></script>
+    <script src="js/inputFilter.js"></script>
+    <!-- <script src="js/formoid-solid-purple.js"></script> -->
+    <script src="js/modernizr.custom.lis.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <header id="inset">
+        <h1>Notas del estudiante</h1>
+    </header>
+    <section>
+        <article>
+            <div id="empleado">
+                <form action="IngresoNotas.php" method="POST" name="cum" id="cum" class="formoid-solid-purple bg-blue ">
+                    <div class="title">
+                        <h2>Cálculo del CUM</h2>
+                    </div>
+
+                    <div class="element-name">
+                        <label class="title"></label>
+                        <div class="nameFirst">
+                            <input type="text" name="estudiante" id="txtestudiante" maxlength="50"
+                                placeholder="Nombre Estudiante"
+                                allowed="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóúÜü"
+                                messageid="alfabeticchars" class="large" />
+                            <span class="icon-place"></span>
+                        </div>
+                        <span id="alfabeticchars">Solo acepta caracteres alfabéticos</span>
+                    </div>
+                    <!-------------------------------------------- Materia 1 --------------------------------------------------------------->
+                    <div class="element-name">
+                        <label class="title"></label>
+                        <div class="nameFirst">
+                            <input type="text" name="materia1" id="txtmateria1" maxlength="50" placeholder="Materia 1"
+                                allowed="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóúÜü"
+                                messageid="alfabeticchars" class="large bi bi-book" />
+                        </div>
+                        <span id="alfabeticchars">Solo acepta caracteres alfabéticos</span>
+                    </div>
+
+                    <div class="element-number">
+                        <label class="title"></label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="nota1" id="nota1" maxlength="12" placeholder="Nota"
+                                    allowed="0123456789." messageid="numbersonly" class="large" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="UV1" id="UV1" maxlength="12" placeholder="Unidades Valorativas"
+                                    allowed="0123456789." messageid="numbersonly" class="large" />
+                            </div>
+                        </div>
+                        
+                        <span id="numbersonly">Solo acepta números y punto decimal</span>
+                    </div>
+                    <!-------------------------------------------- Materia 2 --------------------------------------------------------------->
+                    <div class="element-name">
+                        <label class="title"></label>
+                        <div class="nameFirst">
+                            <input type="text" name="materia2" id="txtmateria2" maxlength="50" placeholder="Materia 2"
+                                allowed="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóúÜü"
+                                messageid="alfabeticchars" class="large bi bi-book" />
+                        </div>
+                        <span id="alfabeticchars">Solo acepta caracteres alfabéticos</span>
+                    </div>
+
+                    <div class="element-number">
+                        <label class="title"></label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="nota2" id="nota2" maxlength="12" placeholder="Nota"
+                                    allowed="0123456789." messageid="numbersonly" class="large" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="UV2" id="UV2" maxlength="12" placeholder="Unidades Valorativas"
+                                    allowed="0123456789." messageid="numbersonly" class="large" />
+                            </div>
+                        </div>
+                        <span id="numbersonly">Solo acepta números y punto decimal</span>
+                    </div>
+
+                    <!-------------------------------------------- Materia 3 --------------------------------------------------------------->
+                    <div class="element-name">
+                        <label class="title"></label>
+                        <div class="nameFirst">
+                            <input type="text" name="materia3" id="txtmateria3" maxlength="50" placeholder="Materia 3"
+                                allowed="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóúÜü"
+                                messageid="alfabeticchars" class="large bi bi-book" />
+                        </div>
+                        <span id="alfabeticchars">Solo acepta caracteres alfabéticos</span>
+                    </div>
+
+                    <div class="element-number">
+                        <label class="title"></label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="nota3" id="nota3" maxlength="12" placeholder="Nota"
+                                    allowed="0123456789." messageid="numbersonly" class="large" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="UV3" id="UV3" maxlength="12" placeholder="Unidades Valorativas"
+                                    allowed="0123456789." messageid="numbersonly" class="large" />
+                            </div>
+                        </div>
+                        <span id="numbersonly">Solo acepta números y punto decimal</span>
+                    </div>
+
+                    <!-------------------------------------------- Materia 4 --------------------------------------------------------------->
+                    <div class="element-name">
+                        <label class="title"></label>
+                        <div class="nameFirst">
+                            <input type="text" name="materia4" id="txtmateria4" maxlength="50" placeholder="Materia 4"
+                                allowed="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóúÜü"
+                                messageid="alfabeticchars" class="large bi bi-book" />
+                        </div>
+                        <span id="alfabeticchars">Solo acepta caracteres alfabéticos</span>
+                    </div>
+
+                    <div class="element-number">
+                        <label class="title"></label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="nota4" id="nota4" maxlength="12" placeholder="Nota"
+                                    allowed="0123456789." messageid="numbersonly" class="large" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="UV4" id="UV4" maxlength="12" placeholder="Unidades Valorativas"
+                                    allowed="0123456789." messageid="numbersonly" class="large" />
+                            </div>
+                        </div>
+                        <span id="numbersonly">Solo acepta números y punto decimal</span>
+                    </div>
+
+                    <!-------------------------------------------- Materia 5 --------------------------------------------------------------->
+                    <div class="element-name">
+                        <label class="title"></label>
+                        <div class="nameFirst">
+                            <input type="text" name="materia5" id="txtmateria5" maxlength="50" placeholder="Materia 5"
+                                allowed="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóúÜü"
+                                messageid="alfabeticchars" class="large bi bi-book" />
+                        </div>
+                        <span id="alfabeticchars">Solo acepta caracteres alfabéticos</span>
+                    </div>
+
+                    <div class="element-number">
+                        <label class="title"></label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="nota5" id="nota5" maxlength="12" placeholder="Nota"
+                                    allowed="0123456789." messageid="numbersonly" class="large" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="UV5" id="UV5" maxlength="12" placeholder="Unidades Valorativas"
+                                    allowed="0123456789." messageid="numbersonly" class="large" />
+                            </div>
+                        </div>
+                        <span id="numbersonly">Solo acepta números y punto decimal</span>
+                    </div>
+
+
+                    <div class="submit">
+                        <input type="submit" name="enviar" id="enviar" value="Enviar" />
+                        <input type="reset" name="reset" id="reset" value="Restablecer" />
+                    </div>
+
+
+                </form>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>
